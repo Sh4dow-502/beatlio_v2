@@ -1,0 +1,209 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1025271217318965864",
+      "lastPropertyId": "11:6654444238055078205",
+      "name": "ExerciseDbModel",
+      "properties": [
+        {
+          "id": "1:7748331672032361941",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4544311189237397827",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:114578443018095411",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:1800856120080418142",
+          "name": "duration",
+          "type": 6
+        },
+        {
+          "id": "5:3659996605810622201",
+          "name": "bpm",
+          "type": 6
+        },
+        {
+          "id": "6:8783042215687643170",
+          "name": "sessionId",
+          "indexId": "1:8047507647313384613",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "SessionDbModel"
+        },
+        {
+          "id": "7:4937988687552105547",
+          "name": "serieId",
+          "indexId": "2:5008770388946681957",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "SerieDbModel"
+        },
+        {
+          "id": "8:4029634461714700471",
+          "name": "lastUpdated",
+          "type": 10
+        },
+        {
+          "id": "9:3547345293676598130",
+          "name": "uid",
+          "indexId": "4:5785252070382892709",
+          "type": 9,
+          "flags": 2080
+        },
+        {
+          "id": "10:3272555760466932724",
+          "name": "useGlobalBpm",
+          "type": 1
+        },
+        {
+          "id": "11:6654444238055078205",
+          "name": "useGlobalDuration",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3108654034388176434",
+      "lastPropertyId": "10:601241939650852356",
+      "name": "SerieDbModel",
+      "properties": [
+        {
+          "id": "1:1957371897246588925",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4761438664772735666",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3342846769109504015",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:3858305531577145819",
+          "name": "durationGlobal",
+          "type": 1
+        },
+        {
+          "id": "5:9006992544142185917",
+          "name": "bpmGlobal",
+          "type": 1
+        },
+        {
+          "id": "6:2578822937613909327",
+          "name": "durationValueGlobal",
+          "type": 6
+        },
+        {
+          "id": "7:4895341958448375727",
+          "name": "bpmValueGlobal",
+          "type": 6
+        },
+        {
+          "id": "8:4420505845714305077",
+          "name": "sessionId",
+          "indexId": "3:3895629116656676756",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "SessionDbModel"
+        },
+        {
+          "id": "9:646383255667050846",
+          "name": "lastUpdated",
+          "type": 10
+        },
+        {
+          "id": "10:601241939650852356",
+          "name": "uid",
+          "indexId": "5:2207257553105687710",
+          "type": 9,
+          "flags": 2080
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:2441840330016880752",
+          "name": "exercises",
+          "targetId": "1:1025271217318965864"
+        }
+      ]
+    },
+    {
+      "id": "3:4374752187207615146",
+      "lastPropertyId": "5:221928528110179592",
+      "name": "SessionDbModel",
+      "properties": [
+        {
+          "id": "1:8307715348801216525",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8049111133182086459",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:9035739436208849024",
+          "name": "restDuration",
+          "type": 6
+        },
+        {
+          "id": "4:1573792866068427027",
+          "name": "lastUpdated",
+          "type": 10
+        },
+        {
+          "id": "5:221928528110179592",
+          "name": "uid",
+          "indexId": "6:2869578513696343163",
+          "type": 9,
+          "flags": 2080
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:6792311605032427866",
+          "name": "series",
+          "targetId": "2:3108654034388176434"
+        },
+        {
+          "id": "4:4718296463696600892",
+          "name": "exercises",
+          "targetId": "1:1025271217318965864"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "3:4374752187207615146",
+  "lastIndexId": "6:2869578513696343163",
+  "lastRelationId": "4:4718296463696600892",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [
+    2207544042802371675
+  ],
+  "version": 1
+}
