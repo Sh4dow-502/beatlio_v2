@@ -254,16 +254,13 @@ class _FormNewExcerciseState extends State<FormNewExcercise> {
           ),
 
           /// SERIE INFO
-          if (hasSerieGlobalConfig) ...[
+          if (widget.isSerie == true && widget.serie != null) ...[
             const Gap(20),
-
             Row(
               children: [
                 Text('Serie:').xSmall().muted(),
-
                 const Gap(5),
-
-                Expanded(child: Text(widget.serie!.name).xSmall().bold()),
+                Text(widget.serie!.name).xSmall().bold(),
               ],
             ),
 
@@ -337,6 +334,10 @@ class _FormNewExcerciseState extends State<FormNewExcercise> {
 
                 animationKey: 'bpm',
               ),
+            ] else ...[
+              const Gap(18),
+
+              BPMController(initialBPM: bpm, onBPMChanged: setBpm),
             ],
 
             /// DURATION
@@ -404,6 +405,13 @@ class _FormNewExcerciseState extends State<FormNewExcercise> {
                     'Usando configuración global: ${(widget.serie?.durationValueGlobal ?? duration) ~/ 60} min',
 
                 animationKey: 'duration',
+              ),
+            ] else ...[
+              const Gap(18),
+
+              DurationController(
+                initialDuration: duration,
+                onDurationChanged: setDuration,
               ),
             ],
           ] else ...[

@@ -17,19 +17,36 @@ class ControlPlay extends StatelessWidget {
             metronomeProvider.togglePlaying();
           },
           child: Container(
-            width: 100,
-            height: 100,
+            width: 300,
+            // height: 100,
             decoration: BoxDecoration(
-              color: colors.primary,
-              shape: BoxShape.circle,
+              color: metronomeProvider.isPlaying
+                  ? colors.secondary.withValues(alpha: 0.5)
+                  : colors.primary,
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: metronomeProvider.isPlaying
+                    ? colors.secondary
+                    : colors.primary,
+                width: 2,
+              ),
+              // shape: BoxShape.circle,
             ),
-            alignment: Alignment.center,
-            child: Icon(
-              metronomeProvider.isPlaying
-                  ? BootstrapIcons.pause
-                  : BootstrapIcons.play,
-              color: Colors.white,
-              size: 45,
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  metronomeProvider.isPlaying
+                      ? BootstrapIcons.pauseFill
+                      : BootstrapIcons.playFill,
+                  color: Colors.white,
+                  size: 35,
+                ),
+                Text(
+                  metronomeProvider.isPlaying ? "Detener" : "Iniciar",
+                ).medium(),
+              ],
             ),
           ),
         );

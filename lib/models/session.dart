@@ -53,4 +53,13 @@ class Session {
 
     return total;
   }
+
+  int totalExerciseInSerie() {
+    // return serie.exercises.length;
+    int total = 0;
+    for (var serie in series) {
+      total += serie.exercises.length;
+    }
+    return total;
+  }
 }

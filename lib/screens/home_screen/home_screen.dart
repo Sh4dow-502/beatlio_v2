@@ -1,4 +1,5 @@
 import 'package:beatlio_v2/provider/home_session_provider.dart';
+import 'package:beatlio_v2/provider/user_provider.dart';
 import 'package:beatlio_v2/screens/home_screen/components/card_serie/card_session.dart';
 import 'package:beatlio_v2/screens/new_sesion_screen/new_session_screen.dart';
 import 'package:beatlio_v2/screens/session_details_screen/session_details_screen.dart';
@@ -26,24 +27,19 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final userName = context.read<UserProvider>().user?.name ?? "User";
     return Scaffold(
       headers: [
         AppBar(
           title: Text("Beatlio").semiBold(),
-          leading: [
-            IconButton(
-              icon: Icon(LucideIcons.menu),
-              variance: ButtonStyle.textIcon(),
-              density: ButtonDensity.compact,
-            ),
-          ],
+          leading: [],
           trailing: [
             IconButton(
               icon: Icon(LucideIcons.search),
               variance: ButtonStyle.textIcon(),
             ),
             Avatar(
-              initials: Avatar.getInitials("santos"),
+              initials: Avatar.getInitials(userName),
               backgroundColor: colors.primary,
               size: 45,
             ),
@@ -62,14 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text("Hi ").x2Large().bold(),
-                Text("Santos").bold(color: colors.primary).x2Large(),
+                Text(userName).bold(color: colors.primary).x2Large(),
                 Spacer(),
                 IconButton(
                   icon: Icon(Icons.swap_vert),
                   variance: ButtonStyle.textIcon(),
                   density: ButtonDensity.compact,
                 ),
-                // Text('Tus sesiones').xLarge().bold(),
               ],
             ),
             Padding(

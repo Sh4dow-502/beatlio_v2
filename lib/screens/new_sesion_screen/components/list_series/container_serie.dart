@@ -33,8 +33,13 @@ class ContainerSerie extends StatelessWidget {
                       ).xSmall().muted(),
                       Text("•"),
                       Text(serie.totalTime()).xSmall().muted(),
-                      Text("•"),
-                      Text("${serie.bpmValueGlobal ?? 0} bpm").xSmall().muted(),
+
+                      if (serie.bpmGlobal) ...[
+                        Text("•"),
+                        Text(
+                          "${serie.bpmValueGlobal ?? 0} bpm",
+                        ).xSmall().muted(),
+                      ],
                     ],
                   ),
                 ],

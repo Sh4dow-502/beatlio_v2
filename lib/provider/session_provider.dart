@@ -75,36 +75,31 @@ class SessionProvider extends ChangeNotifier {
     _exercises = exercises;
     _currentExerciseIndex = 0;
     _syncCurrentAndNextExercise();
-    notifyListeners();
+    // notifyListeners();
   }
 
   void setSeries(List<Serie> series) {
     _series = series;
     if (_exercises.isEmpty) {
       _currentExerciseIndex = 0;
-      _syncCurrentAndNextExercise();
     }
-    notifyListeners();
+    _syncCurrentAndNextExercise();
+    // notifyListeners();
   }
 
   void setRestTimeSeconds(int seconds) {
     _restTimeSeconds = seconds;
     _syncCurrentAndNextExercise();
-    notifyListeners();
+    // notifyListeners();
   }
 
   void setTotalExercises(int total) {
     _totalExercises = total;
     _syncCurrentAndNextExercise();
-    notifyListeners();
   }
 
   List<Exercise> _resolvedExercises() {
-    if (_exercises.isNotEmpty) {
-      return _exercises;
-    }
-
-    return _series.expand((serie) => serie.exercises).toList();
+    return [..._exercises, ..._series.expand((s) => s.exercises)];
   }
 
   List<SessionStep> _resolvedSteps() {

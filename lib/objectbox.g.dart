@@ -17,87 +17,88 @@ import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 import 'models/db_models/exercise_db_model.dart';
 import 'models/db_models/serie_db_model.dart';
 import 'models/db_models/session_db_model.dart';
+import 'models/db_models/user_db_model.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
 final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(1, 1025271217318965864),
+    id: const obx_int.IdUid(1, 5862890105305746896),
     name: 'ExerciseDbModel',
-    lastPropertyId: const obx_int.IdUid(11, 6654444238055078205),
+    lastPropertyId: const obx_int.IdUid(11, 2333123488464876583),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 7748331672032361941),
+        id: const obx_int.IdUid(1, 7169298200443364002),
         name: 'id',
         type: 6,
         flags: 1,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(2, 4544311189237397827),
+        id: const obx_int.IdUid(2, 6767751380461083219),
+        name: 'uid',
+        type: 9,
+        flags: 2080,
+        indexId: const obx_int.IdUid(1, 7512138164640766226),
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(3, 6866241496277206355),
         name: 'name',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(3, 114578443018095411),
+        id: const obx_int.IdUid(4, 5543275967926317585),
         name: 'description',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(4, 1800856120080418142),
+        id: const obx_int.IdUid(5, 8698252781473332000),
         name: 'duration',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(5, 3659996605810622201),
+        id: const obx_int.IdUid(6, 6637695151349133469),
         name: 'bpm',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(6, 8783042215687643170),
-        name: 'sessionId',
-        type: 11,
-        flags: 520,
-        indexId: const obx_int.IdUid(1, 8047507647313384613),
-        relationField: 'session',
-        relationTarget: 'SessionDbModel',
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(7, 4937988687552105547),
-        name: 'serieId',
-        type: 11,
-        flags: 520,
-        indexId: const obx_int.IdUid(2, 5008770388946681957),
-        relationField: 'serie',
-        relationTarget: 'SerieDbModel',
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(8, 4029634461714700471),
-        name: 'lastUpdated',
-        type: 10,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(9, 3547345293676598130),
-        name: 'uid',
-        type: 9,
-        flags: 2080,
-        indexId: const obx_int.IdUid(4, 5785252070382892709),
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(10, 3272555760466932724),
+        id: const obx_int.IdUid(7, 8746461668711989197),
         name: 'useGlobalBpm',
         type: 1,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(11, 6654444238055078205),
+        id: const obx_int.IdUid(8, 2651881371397949630),
         name: 'useGlobalDuration',
         type: 1,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(9, 4844644072889252871),
+        name: 'sessionId',
+        type: 11,
+        flags: 520,
+        indexId: const obx_int.IdUid(2, 6320935432992693868),
+        relationField: 'session',
+        relationTarget: 'SessionDbModel',
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(10, 7380477098368489075),
+        name: 'serieId',
+        type: 11,
+        flags: 520,
+        indexId: const obx_int.IdUid(3, 3643918276605505444),
+        relationField: 'serie',
+        relationTarget: 'SerieDbModel',
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(11, 2333123488464876583),
+        name: 'lastUpdated',
+        type: 10,
         flags: 0,
       ),
     ],
@@ -105,135 +106,157 @@ final _entities = <obx_int.ModelEntity>[
     backlinks: <obx_int.ModelBacklink>[],
   ),
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(2, 3108654034388176434),
+    id: const obx_int.IdUid(2, 1574390289755331795),
     name: 'SerieDbModel',
-    lastPropertyId: const obx_int.IdUid(10, 601241939650852356),
+    lastPropertyId: const obx_int.IdUid(10, 8689450071786415520),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 1957371897246588925),
+        id: const obx_int.IdUid(1, 5534885171212211020),
         name: 'id',
         type: 6,
         flags: 1,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(2, 4761438664772735666),
+        id: const obx_int.IdUid(2, 3036369122989357474),
         name: 'name',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(3, 3342846769109504015),
+        id: const obx_int.IdUid(3, 7717488119406773836),
         name: 'description',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(4, 3858305531577145819),
+        id: const obx_int.IdUid(4, 1632880375448048184),
+        name: 'uid',
+        type: 9,
+        flags: 2080,
+        indexId: const obx_int.IdUid(4, 5643094895915671589),
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(5, 2979449737068388003),
         name: 'durationGlobal',
         type: 1,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(5, 9006992544142185917),
+        id: const obx_int.IdUid(6, 32442264950764022),
         name: 'bpmGlobal',
         type: 1,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(6, 2578822937613909327),
+        id: const obx_int.IdUid(7, 3991715058979468626),
         name: 'durationValueGlobal',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(7, 4895341958448375727),
+        id: const obx_int.IdUid(8, 7270785168053605157),
         name: 'bpmValueGlobal',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(8, 4420505845714305077),
+        id: const obx_int.IdUid(9, 3134860534873742137),
         name: 'sessionId',
         type: 11,
         flags: 520,
-        indexId: const obx_int.IdUid(3, 3895629116656676756),
+        indexId: const obx_int.IdUid(5, 7993516712805715477),
         relationField: 'session',
         relationTarget: 'SessionDbModel',
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(9, 646383255667050846),
+        id: const obx_int.IdUid(10, 8689450071786415520),
         name: 'lastUpdated',
         type: 10,
         flags: 0,
       ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(10, 601241939650852356),
-        name: 'uid',
-        type: 9,
-        flags: 2080,
-        indexId: const obx_int.IdUid(5, 2207257553105687710),
-      ),
     ],
     relations: <obx_int.ModelRelation>[
       obx_int.ModelRelation(
-        id: const obx_int.IdUid(1, 2441840330016880752),
+        id: const obx_int.IdUid(1, 7246895725710162512),
         name: 'exercises',
-        targetId: const obx_int.IdUid(1, 1025271217318965864),
+        targetId: const obx_int.IdUid(1, 5862890105305746896),
       ),
     ],
     backlinks: <obx_int.ModelBacklink>[],
   ),
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(3, 4374752187207615146),
+    id: const obx_int.IdUid(3, 1245805527222442569),
     name: 'SessionDbModel',
-    lastPropertyId: const obx_int.IdUid(5, 221928528110179592),
+    lastPropertyId: const obx_int.IdUid(5, 6615348981232272076),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 8307715348801216525),
+        id: const obx_int.IdUid(1, 5709892317440313422),
         name: 'id',
         type: 6,
         flags: 1,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(2, 8049111133182086459),
+        id: const obx_int.IdUid(2, 4150527792579316023),
         name: 'name',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(3, 9035739436208849024),
+        id: const obx_int.IdUid(3, 3565672966032942550),
         name: 'restDuration',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(4, 1573792866068427027),
+        id: const obx_int.IdUid(4, 4833078835820433624),
+        name: 'uid',
+        type: 9,
+        flags: 2080,
+        indexId: const obx_int.IdUid(6, 5198730784708907338),
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(5, 6615348981232272076),
         name: 'lastUpdated',
         type: 10,
         flags: 0,
       ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(5, 221928528110179592),
-        name: 'uid',
-        type: 9,
-        flags: 2080,
-        indexId: const obx_int.IdUid(6, 2869578513696343163),
-      ),
     ],
     relations: <obx_int.ModelRelation>[
       obx_int.ModelRelation(
-        id: const obx_int.IdUid(3, 6792311605032427866),
-        name: 'series',
-        targetId: const obx_int.IdUid(2, 3108654034388176434),
+        id: const obx_int.IdUid(2, 2934556526475261406),
+        name: 'exercises',
+        targetId: const obx_int.IdUid(1, 5862890105305746896),
       ),
       obx_int.ModelRelation(
-        id: const obx_int.IdUid(4, 4718296463696600892),
-        name: 'exercises',
-        targetId: const obx_int.IdUid(1, 1025271217318965864),
+        id: const obx_int.IdUid(3, 2263836851219020600),
+        name: 'series',
+        targetId: const obx_int.IdUid(2, 1574390289755331795),
       ),
     ],
+    backlinks: <obx_int.ModelBacklink>[],
+  ),
+  obx_int.ModelEntity(
+    id: const obx_int.IdUid(4, 5641128578864360602),
+    name: 'UserDbModel',
+    lastPropertyId: const obx_int.IdUid(2, 5857028345797195344),
+    flags: 0,
+    properties: <obx_int.ModelProperty>[
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(1, 2006424519839865079),
+        name: 'id',
+        type: 6,
+        flags: 1,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(2, 5857028345797195344),
+        name: 'name',
+        type: 9,
+        flags: 0,
+      ),
+    ],
+    relations: <obx_int.ModelRelation>[],
     backlinks: <obx_int.ModelBacklink>[],
   ),
 ];
@@ -281,14 +304,14 @@ obx_int.ModelDefinition getObjectBoxModel() {
     // Typically, this is done with `dart run build_runner build`.
     generatorVersion: obx_int.GeneratorVersion.v2025_12_16,
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(3, 4374752187207615146),
-    lastIndexId: const obx_int.IdUid(6, 2869578513696343163),
-    lastRelationId: const obx_int.IdUid(4, 4718296463696600892),
+    lastEntityId: const obx_int.IdUid(4, 5641128578864360602),
+    lastIndexId: const obx_int.IdUid(6, 5198730784708907338),
+    lastRelationId: const obx_int.IdUid(3, 2263836851219020600),
     lastSequenceId: const obx_int.IdUid(0, 0),
     retiredEntityUids: const [],
     retiredIndexUids: const [],
     retiredPropertyUids: const [],
-    retiredRelationUids: const [2207544042802371675],
+    retiredRelationUids: const [],
     modelVersion: 5,
     modelVersionParserMinimum: 5,
     version: 1,
@@ -307,23 +330,23 @@ obx_int.ModelDefinition getObjectBoxModel() {
         object.id = id;
       },
       objectToFB: (ExerciseDbModel object, fb.Builder fbb) {
+        final uidOffset = fbb.writeString(object.uid);
         final nameOffset = fbb.writeString(object.name);
         final descriptionOffset = object.description == null
             ? null
             : fbb.writeString(object.description!);
-        final uidOffset = fbb.writeString(object.uid);
         fbb.startTable(12);
         fbb.addInt64(0, object.id);
-        fbb.addOffset(1, nameOffset);
-        fbb.addOffset(2, descriptionOffset);
-        fbb.addInt64(3, object.duration);
-        fbb.addInt64(4, object.bpm);
-        fbb.addInt64(5, object.session.targetId);
-        fbb.addInt64(6, object.serie.targetId);
-        fbb.addInt64(7, object.lastUpdated.millisecondsSinceEpoch);
-        fbb.addOffset(8, uidOffset);
-        fbb.addBool(9, object.useGlobalBpm);
-        fbb.addBool(10, object.useGlobalDuration);
+        fbb.addOffset(1, uidOffset);
+        fbb.addOffset(2, nameOffset);
+        fbb.addOffset(3, descriptionOffset);
+        fbb.addInt64(4, object.duration);
+        fbb.addInt64(5, object.bpm);
+        fbb.addBool(6, object.useGlobalBpm);
+        fbb.addBool(7, object.useGlobalDuration);
+        fbb.addInt64(8, object.session.targetId);
+        fbb.addInt64(9, object.serie.targetId);
+        fbb.addInt64(10, object.lastUpdated.millisecondsSinceEpoch);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -332,39 +355,39 @@ obx_int.ModelDefinition getObjectBoxModel() {
         final rootOffset = buffer.derefObject(0);
         final nameParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 6, '');
+        ).vTableGet(buffer, rootOffset, 8, '');
         final descriptionParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGetNullable(buffer, rootOffset, 8);
+        ).vTableGetNullable(buffer, rootOffset, 10);
         final durationParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          10,
-          0,
-        );
-        final bpmParam = const fb.Int64Reader().vTableGet(
           buffer,
           rootOffset,
           12,
           0,
         );
+        final bpmParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          14,
+          0,
+        );
         final uidParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 20, '');
+        ).vTableGet(buffer, rootOffset, 6, '');
         final useGlobalBpmParam = const fb.BoolReader().vTableGet(
           buffer,
           rootOffset,
-          22,
+          16,
           false,
         );
         final useGlobalDurationParam = const fb.BoolReader().vTableGet(
           buffer,
           rootOffset,
-          24,
+          18,
           false,
         );
         final lastUpdatedParam = DateTime.fromMillisecondsSinceEpoch(
-          const fb.Int64Reader().vTableGet(buffer, rootOffset, 18, 0),
+          const fb.Int64Reader().vTableGet(buffer, rootOffset, 24, 0),
         );
         final object = ExerciseDbModel(
           name: nameParam,
@@ -379,14 +402,14 @@ obx_int.ModelDefinition getObjectBoxModel() {
         object.session.targetId = const fb.Int64Reader().vTableGet(
           buffer,
           rootOffset,
-          14,
+          20,
           0,
         );
         object.session.attach(store);
         object.serie.targetId = const fb.Int64Reader().vTableGet(
           buffer,
           rootOffset,
-          16,
+          22,
           0,
         );
         object.serie.attach(store);
@@ -413,13 +436,13 @@ obx_int.ModelDefinition getObjectBoxModel() {
         fbb.addInt64(0, object.id);
         fbb.addOffset(1, nameOffset);
         fbb.addOffset(2, descriptionOffset);
-        fbb.addBool(3, object.durationGlobal);
-        fbb.addBool(4, object.bpmGlobal);
-        fbb.addInt64(5, object.durationValueGlobal);
-        fbb.addInt64(6, object.bpmValueGlobal);
-        fbb.addInt64(7, object.session.targetId);
-        fbb.addInt64(8, object.lastUpdated.millisecondsSinceEpoch);
-        fbb.addOffset(9, uidOffset);
+        fbb.addOffset(3, uidOffset);
+        fbb.addBool(4, object.durationGlobal);
+        fbb.addBool(5, object.bpmGlobal);
+        fbb.addInt64(6, object.durationValueGlobal);
+        fbb.addInt64(7, object.bpmValueGlobal);
+        fbb.addInt64(8, object.session.targetId);
+        fbb.addInt64(9, object.lastUpdated.millisecondsSinceEpoch);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -430,33 +453,33 @@ obx_int.ModelDefinition getObjectBoxModel() {
           asciiOptimization: true,
         ).vTableGet(buffer, rootOffset, 6, '');
         final lastUpdatedParam = DateTime.fromMillisecondsSinceEpoch(
-          const fb.Int64Reader().vTableGet(buffer, rootOffset, 20, 0),
+          const fb.Int64Reader().vTableGet(buffer, rootOffset, 22, 0),
         );
         final durationGlobalParam = const fb.BoolReader().vTableGet(
-          buffer,
-          rootOffset,
-          10,
-          false,
-        );
-        final bpmGlobalParam = const fb.BoolReader().vTableGet(
           buffer,
           rootOffset,
           12,
           false,
         );
+        final bpmGlobalParam = const fb.BoolReader().vTableGet(
+          buffer,
+          rootOffset,
+          14,
+          false,
+        );
         final durationValueGlobalParam = const fb.Int64Reader()
-            .vTableGetNullable(buffer, rootOffset, 14);
+            .vTableGetNullable(buffer, rootOffset, 16);
         final bpmValueGlobalParam = const fb.Int64Reader().vTableGetNullable(
           buffer,
           rootOffset,
-          16,
+          18,
         );
         final descriptionParam = const fb.StringReader(
           asciiOptimization: true,
         ).vTableGetNullable(buffer, rootOffset, 8);
         final uidParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 22, '');
+        ).vTableGet(buffer, rootOffset, 10, '');
         final object = SerieDbModel(
           name: nameParam,
           lastUpdated: lastUpdatedParam,
@@ -470,7 +493,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
         object.session.targetId = const fb.Int64Reader().vTableGet(
           buffer,
           rootOffset,
-          18,
+          20,
           0,
         );
         object.session.attach(store);
@@ -486,8 +509,8 @@ obx_int.ModelDefinition getObjectBoxModel() {
       model: _entities[2],
       toOneRelations: (SessionDbModel object) => [],
       toManyRelations: (SessionDbModel object) => {
+        obx_int.RelInfo<SessionDbModel>.toMany(2, object.id): object.exercises,
         obx_int.RelInfo<SessionDbModel>.toMany(3, object.id): object.series,
-        obx_int.RelInfo<SessionDbModel>.toMany(4, object.id): object.exercises,
       },
       getId: (SessionDbModel object) => object.id,
       setId: (SessionDbModel object, int id) {
@@ -500,8 +523,8 @@ obx_int.ModelDefinition getObjectBoxModel() {
         fbb.addInt64(0, object.id);
         fbb.addOffset(1, nameOffset);
         fbb.addInt64(2, object.restDuration);
-        fbb.addInt64(3, object.lastUpdated.millisecondsSinceEpoch);
-        fbb.addOffset(4, uidOffset);
+        fbb.addOffset(3, uidOffset);
+        fbb.addInt64(4, object.lastUpdated.millisecondsSinceEpoch);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -519,9 +542,9 @@ obx_int.ModelDefinition getObjectBoxModel() {
         );
         final uidParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 12, '');
+        ).vTableGet(buffer, rootOffset, 10, '');
         final lastUpdatedParam = DateTime.fromMillisecondsSinceEpoch(
-          const fb.Int64Reader().vTableGet(buffer, rootOffset, 10, 0),
+          const fb.Int64Reader().vTableGet(buffer, rootOffset, 12, 0),
         );
         final object = SessionDbModel(
           name: nameParam,
@@ -530,15 +553,43 @@ obx_int.ModelDefinition getObjectBoxModel() {
           lastUpdated: lastUpdatedParam,
         )..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
         obx_int.InternalToManyAccess.setRelInfo<SessionDbModel>(
+          object.exercises,
+          store,
+          obx_int.RelInfo<SessionDbModel>.toMany(2, object.id),
+        );
+        obx_int.InternalToManyAccess.setRelInfo<SessionDbModel>(
           object.series,
           store,
           obx_int.RelInfo<SessionDbModel>.toMany(3, object.id),
         );
-        obx_int.InternalToManyAccess.setRelInfo<SessionDbModel>(
-          object.exercises,
-          store,
-          obx_int.RelInfo<SessionDbModel>.toMany(4, object.id),
-        );
+        return object;
+      },
+    ),
+    UserDbModel: obx_int.EntityDefinition<UserDbModel>(
+      model: _entities[3],
+      toOneRelations: (UserDbModel object) => [],
+      toManyRelations: (UserDbModel object) => {},
+      getId: (UserDbModel object) => object.id,
+      setId: (UserDbModel object, int id) {
+        object.id = id;
+      },
+      objectToFB: (UserDbModel object, fb.Builder fbb) {
+        final nameOffset = fbb.writeString(object.name);
+        fbb.startTable(3);
+        fbb.addInt64(0, object.id);
+        fbb.addOffset(1, nameOffset);
+        fbb.finish(fbb.endTable());
+        return object.id;
+      },
+      objectFromFB: (obx.Store store, ByteData fbData) {
+        final buffer = fb.BufferContext(fbData);
+        final rootOffset = buffer.derefObject(0);
+        final nameParam = const fb.StringReader(
+          asciiOptimization: true,
+        ).vTableGet(buffer, rootOffset, 6, '');
+        final object = UserDbModel(name: nameParam)
+          ..id = const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
+
         return object;
       },
     ),
@@ -554,54 +605,54 @@ class ExerciseDbModel_ {
     _entities[0].properties[0],
   );
 
+  /// See [ExerciseDbModel.uid].
+  static final uid = obx.QueryStringProperty<ExerciseDbModel>(
+    _entities[0].properties[1],
+  );
+
   /// See [ExerciseDbModel.name].
   static final name = obx.QueryStringProperty<ExerciseDbModel>(
-    _entities[0].properties[1],
+    _entities[0].properties[2],
   );
 
   /// See [ExerciseDbModel.description].
   static final description = obx.QueryStringProperty<ExerciseDbModel>(
-    _entities[0].properties[2],
+    _entities[0].properties[3],
   );
 
   /// See [ExerciseDbModel.duration].
   static final duration = obx.QueryIntegerProperty<ExerciseDbModel>(
-    _entities[0].properties[3],
+    _entities[0].properties[4],
   );
 
   /// See [ExerciseDbModel.bpm].
   static final bpm = obx.QueryIntegerProperty<ExerciseDbModel>(
-    _entities[0].properties[4],
+    _entities[0].properties[5],
+  );
+
+  /// See [ExerciseDbModel.useGlobalBpm].
+  static final useGlobalBpm = obx.QueryBooleanProperty<ExerciseDbModel>(
+    _entities[0].properties[6],
+  );
+
+  /// See [ExerciseDbModel.useGlobalDuration].
+  static final useGlobalDuration = obx.QueryBooleanProperty<ExerciseDbModel>(
+    _entities[0].properties[7],
   );
 
   /// See [ExerciseDbModel.session].
   static final session =
       obx.QueryRelationToOne<ExerciseDbModel, SessionDbModel>(
-        _entities[0].properties[5],
+        _entities[0].properties[8],
       );
 
   /// See [ExerciseDbModel.serie].
   static final serie = obx.QueryRelationToOne<ExerciseDbModel, SerieDbModel>(
-    _entities[0].properties[6],
+    _entities[0].properties[9],
   );
 
   /// See [ExerciseDbModel.lastUpdated].
   static final lastUpdated = obx.QueryDateProperty<ExerciseDbModel>(
-    _entities[0].properties[7],
-  );
-
-  /// See [ExerciseDbModel.uid].
-  static final uid = obx.QueryStringProperty<ExerciseDbModel>(
-    _entities[0].properties[8],
-  );
-
-  /// See [ExerciseDbModel.useGlobalBpm].
-  static final useGlobalBpm = obx.QueryBooleanProperty<ExerciseDbModel>(
-    _entities[0].properties[9],
-  );
-
-  /// See [ExerciseDbModel.useGlobalDuration].
-  static final useGlobalDuration = obx.QueryBooleanProperty<ExerciseDbModel>(
     _entities[0].properties[10],
   );
 }
@@ -623,38 +674,38 @@ class SerieDbModel_ {
     _entities[1].properties[2],
   );
 
+  /// See [SerieDbModel.uid].
+  static final uid = obx.QueryStringProperty<SerieDbModel>(
+    _entities[1].properties[3],
+  );
+
   /// See [SerieDbModel.durationGlobal].
   static final durationGlobal = obx.QueryBooleanProperty<SerieDbModel>(
-    _entities[1].properties[3],
+    _entities[1].properties[4],
   );
 
   /// See [SerieDbModel.bpmGlobal].
   static final bpmGlobal = obx.QueryBooleanProperty<SerieDbModel>(
-    _entities[1].properties[4],
+    _entities[1].properties[5],
   );
 
   /// See [SerieDbModel.durationValueGlobal].
   static final durationValueGlobal = obx.QueryIntegerProperty<SerieDbModel>(
-    _entities[1].properties[5],
+    _entities[1].properties[6],
   );
 
   /// See [SerieDbModel.bpmValueGlobal].
   static final bpmValueGlobal = obx.QueryIntegerProperty<SerieDbModel>(
-    _entities[1].properties[6],
+    _entities[1].properties[7],
   );
 
   /// See [SerieDbModel.session].
   static final session = obx.QueryRelationToOne<SerieDbModel, SessionDbModel>(
-    _entities[1].properties[7],
+    _entities[1].properties[8],
   );
 
   /// See [SerieDbModel.lastUpdated].
   static final lastUpdated = obx.QueryDateProperty<SerieDbModel>(
-    _entities[1].properties[8],
-  );
-
-  /// See [SerieDbModel.uid].
-  static final uid = obx.QueryStringProperty<SerieDbModel>(
     _entities[1].properties[9],
   );
 
@@ -682,24 +733,37 @@ class SessionDbModel_ {
     _entities[2].properties[2],
   );
 
-  /// See [SessionDbModel.lastUpdated].
-  static final lastUpdated = obx.QueryDateProperty<SessionDbModel>(
+  /// See [SessionDbModel.uid].
+  static final uid = obx.QueryStringProperty<SessionDbModel>(
     _entities[2].properties[3],
   );
 
-  /// See [SessionDbModel.uid].
-  static final uid = obx.QueryStringProperty<SessionDbModel>(
+  /// See [SessionDbModel.lastUpdated].
+  static final lastUpdated = obx.QueryDateProperty<SessionDbModel>(
     _entities[2].properties[4],
-  );
-
-  /// see [SessionDbModel.series]
-  static final series = obx.QueryRelationToMany<SessionDbModel, SerieDbModel>(
-    _entities[2].relations[0],
   );
 
   /// see [SessionDbModel.exercises]
   static final exercises =
       obx.QueryRelationToMany<SessionDbModel, ExerciseDbModel>(
-        _entities[2].relations[1],
+        _entities[2].relations[0],
       );
+
+  /// see [SessionDbModel.series]
+  static final series = obx.QueryRelationToMany<SessionDbModel, SerieDbModel>(
+    _entities[2].relations[1],
+  );
+}
+
+/// [UserDbModel] entity fields to define ObjectBox queries.
+class UserDbModel_ {
+  /// See [UserDbModel.id].
+  static final id = obx.QueryIntegerProperty<UserDbModel>(
+    _entities[3].properties[0],
+  );
+
+  /// See [UserDbModel.name].
+  static final name = obx.QueryStringProperty<UserDbModel>(
+    _entities[3].properties[1],
+  );
 }

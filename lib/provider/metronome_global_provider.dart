@@ -53,6 +53,7 @@ class MetronomeGlobalProvider extends ChangeNotifier {
 
     if (clamped == _bpm) return;
     _bpm = clamped;
+
     notifyListeners();
   }
 
